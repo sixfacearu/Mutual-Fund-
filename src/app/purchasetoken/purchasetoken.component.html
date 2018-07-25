@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<mat-card><h4>ADDRESS:{{addres}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ETHER BALANCE:{{balance}}</h4>
+  
+  </mat-card>
+<body>
+
+  
+      
+
+    <div class="container2">
+        
+      <div class="container2">
+        <h2>TOKEN MARKET</h2>
+             <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>TOKEN NAME</th>
+              <th>TOKEN SYMBOL</th>
+              <th>TOKEN ADDRESS</th>
+              <th>TOKEN PRICE</th>
+              <th>PRICE CHANGE</th> 
+              <th>TOKEN COUNT</th>
+             <th>TOTAL VALUE</th>
+              <th>PURCHASE TOKEN </th>  
+                           
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>AgelTRix </td>
+              <td>(AGL)</td>
+              <td>{{AGL}}</td>
+              <td>{{result}}</td>
+              <td class="fa fa-caret-down">&nbsp;&nbsp;{{change2}}</td>
+              
+              <td><input type="text" [(ngModel)]="agltxt" required></td>
+              <td><input type="text"  value={{agltxt*result}} readonly></td>
+              <td>&emsp;&emsp;&emsp;&emsp;<button type="button" (click)="AGLC()" class="btn btn-info">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 2</td>
+              <td>Bendros </td>
+              <td>(BDS)</td>
+              <td>{{BDS}}</td>
+              <td>{{result1}}</td>
+              <td class="fa fa-caret-up">&nbsp;&nbsp;{{change3}}</td>
+              <td><input type="text" [(ngModel)]="bdstxt" required></td>
+              <td><input type="text" value={{bdstxt*result1}} readonly></td>
+              <td>&emsp;&emsp;&emsp;&emsp;<button type="button" class="btn btn-info" (click)="BDSC()">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 3</td>
+              <td> Castdos </td>
+              <td> (CDS)</td>
+              <td>{{CDS}}</td>
+              <td>{{result2}}</td>
+              <td class="fa fa-caret-down">&nbsp;&nbsp;{{change4}}</td>
+              <td><input type="text"  [(ngModel)]="cdstxt" required></td>
+              <td><input type="text" value={{cdstxt*result2}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info " data-toggle="modal" (click)="CDSC()" data-target="#myModal">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 4</td>
+              <td> Dostrix  </td>
+              <td> (DTX)</td>
+              <td>{{DTX}}</td>
+              <td>{{result3}}</td>
+              <td class="fa fa-caret-up">&nbsp;&nbsp;{{change5}}</td>
+              <td><input type="text" [(ngModel)]="dostxt" required></td>
+              <td><input type="text" value={{dostxt*result3}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" (click)="DTXC()">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 5</td>
+              <td> Binance </td>
+              <td>  (BNB)</td>
+              <td>{{BNB}}</td>
+              <td>{{result4}}</td>
+              <td class="fa fa-caret-down">&nbsp;&nbsp;{{change6}}</td>
+              <td><input type="text" [(ngModel)]="bintxt" required></td>
+              <td><input type="text" value={{bintxt*result4}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info " (click)="BNBC()" data-toggle="modal" data-target="#myModal">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 6</td>
+              <td> OmiseGO  </td>
+              <td> (OMG)</td>
+              <td>{{OMG}}</td>
+              <td>{{result5}}</td>
+              <td class="fa fa-caret-up">&nbsp;&nbsp;{{change7}}</td>
+              <td><input type="text" [(ngModel)]="omgtxt" required></td>
+              <td><input type="text" value={{omgtxt*result5}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info " data-toggle="modal" (click)="OMGC()" data-target="#myModal">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 7</td>
+              <td>  Zilliqa </td>
+              <td>(ZIL)</td>
+              <td>{{ZIL}}</td>
+              <td>{{result6}}</td>
+              <td class="fa fa-caret-down">&nbsp;&nbsp;{{change8}}</td>
+              <td><input type="text" [(ngModel)]="ziltxt"></td>
+              <td><input type="text" value={{ziltxt*result6}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info" (click)="ZILC()" data-toggle="modal" data-target="#myModal">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 8</td>
+              <td>  Aeternity</td>
+              <td>  (AE)</td>
+              <td>{{AE}}</td>
+              <td>{{result7}}</td>
+              <td class="fa fa-caret-up">&nbsp;&nbsp;{{change9}}</td>
+              <td><input type="text" [(ngModel)]="atertxt" required></td>
+              <td><input type="text" value={{atertxt*result7}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info" (click)="AEC()" data-toggle="modal" data-target="#myModal">BUY<td></button>
+            </tr>
+            <tr>
+              <td> 9</td>
+              <td>  Walton  </td>
+              <td> (WTC)</td>
+              <td>{{WTC}}</td>
+              <td>{{result8}}</td>
+              <td class="fa fa-caret-down">&nbsp;&nbsp;{{change10}}</td>
+              <td><input type="text" [(ngModel)]="wtctxt" required></td>
+              <td><input type="text" value={{wtctxt*result8}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" class="btn btn-info" (click)="WTCC()" data-toggle="modal"data-target="#myModal">BUY<td></button>
+            </tr> 
+            <tr>
+              <td> 10</td>
+              <td>  Bytom   </td>
+              <td> (BTM)</td>
+              <td>{{BTM}}</td>
+              <td>{{result9}}</td>
+              <td class="fa fa-caret-up">&nbsp;&nbsp;{{change11}}</td>
+              <td><input type="text" [(ngModel)]="btmtxt" required></td>
+              <td><input type="text" value={{btmtxt*result9}} readonly></td>
+              <td>&emsp;&emsp;<button type="button" (click)="BTMC()" class="btn btn-info " data-toggle="modal" >BUY<td></button>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    
+      
+    </div>
+          
+   
+  </body>
+  <ngx-spinner></ngx-spinner>
+<ngx-spinner
+     bdColor="rgba(51,51,51,0.8)"
+     size="medium"
+     color="#fff"
+     loadingText="Loading..."
+     type="ball-scale-multiple">
+</ngx-spinner>

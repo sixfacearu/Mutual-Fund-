@@ -1,0 +1,56 @@
+
+
+<body>
+    <mat-card><h4>ADDRESS:{{addres}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ETHER BALANCE:{{balance}}</h4>
+      
+      </mat-card>
+    
+      
+        <div class="row">
+           
+           
+                    
+          
+      <mat-card class="example-card">
+        <mat-card-header>
+         <h2>PORTFOLIO ACCOUNT</h2>
+        </mat-card-header>
+       
+        <mat-card-content>
+            
+                  <h3>  Portfolio Address</h3>
+                    <input type="text" id="text" name="text_name" id="portaddu" readonly style=" height: 30px; width:700px;"/>
+                   <h3>  Available Tokens</h3>
+                    <input type="text" id="text" name="text_name" value={{portavailaTK}} readonly style=" height: 30px; width:700px;"/>
+                  </mat-card-content>
+        
+                </mat-card>
+                </div>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                     <h2>COMMISSION EARNED</h2>
+                    </mat-card-header>
+                   
+                    <mat-card-content>
+                        
+                              <h3> Value in Ether</h3>
+                                <input type="text" id="text" name="text_name" value={{portcommission[1]}} readonly style=" height: 30px; width:700px;"/>
+                               <h3>  DIVIDE PROFIT</h3>
+                               
+                      
+                                <button mat-raised-button color="primary" (click)= "HS.Dividend()">DIVIDE PROFIT</button>
+        
+                              </mat-card-content>
+                    
+                            </mat-card>
+                           <ngx-spinner></ngx-spinner> 
+                            <ngx-spinner
+                                 bdColor="rgba(51,51,51,0.8)"
+                                 size="medium"
+                                 color="#fff"
+                                 loadingText="Loading..."
+                                 type="ball-scale-multiple">
+                            </ngx-spinner> 
+                              
+                          

@@ -1,0 +1,79 @@
+<mat-card><h4>ADDRESS:{{addres}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ETHER BALANCE:{{balance}}</h4>
+  
+  </mat-card>
+
+  <div class="row">
+      <mat-card class="example-card">
+       
+        <mat-card-content>
+            <h2>INVEST ETHER</h2>
+                  <h3>  Portfolio Address</h3>
+                    <input type="text" id="text" [(ngModel)]="portaddd" name="text_name" id="portaddu"  style=" height: 30px; width:700px;"/>
+                    <h3>     Ether Value</h3>
+                    <input type="text" id="investeth" [(ngModel)]="ether_V" name="text_name" id="portaddu" style=" height: 30px; width:700px;"/><br><br>
+                    
+                   <h3>    Amount of Tokens</h3>
+                    <input type="text" id="tn" name="text_name"  [(ngModel)]="token_V"value={{ether_V*10}} style=" height: 30px; width:700px;"/>
+               
+                        <button mat-raised-button color="primary" (click)="submit()">INVEST ETHER</button>
+  
+                      <h2>CHECK AVAILABLE TOKENS</h2>
+                      <h3>  Address</h3>
+                      <input type="text" id="text" name="text_name"  value={{inestoradd}} readonly style=" height: 30px; width:700px;"/>
+                     <h3> Available Token</h3>
+                   
+
+                      <input type="text" id="invesAvaT" class="form-control" value={{investortok}}  readonly style=" height: 30px; width:700px;"/>
+                      <h2>SELL TOKENS</h2>
+                      <h3> Portfolio Manager Address</h3>
+                      <input type="text" name="text_name" id="selladd" [(ngModel)]="portadx" style=" height: 30px; width:700px;"/>
+                      <h3>   Amount of Token</h3>
+                      <input type="text" id="text" name="text_name" [(ngModel)]="tokencox" style=" height: 30px; width:700px;"/><br><br>
+                 
+                      <button mat-raised-button color="primary" (click)="JSubmit()">SELL TOKEN</button>
+                    
+                      
+                      
+                  </mat-card-content>
+        
+           </mat-card>
+                </div>
+                <mat-card class="example-card1">
+       
+                        <mat-card-content>
+                <h2>LIST OF PORTFOLIO MANAGERS</h2>
+ 
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>&nbsp;
+                      <th>Portfolio Manager Address</th>&nbsp;
+                      <th>Stake Ether</th>&nbsp;
+                      <th>Tokenvalue</th>
+                    </tr>
+                  </thead>
+                  <tbody id="body_bank">
+                      <tr *ngFor="let s of slider;index as i" >
+                              <td>{{i}}</td>&nbsp;&nbsp;
+                              <td>{{ s.address }}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <td>{{s.eth}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <td>{{ s.bal }}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              
+              
+                        </tr>
+              </tbody>
+              
+                </table>
+            </mat-card-content>
+        
+        </mat-card> 
+        <ngx-spinner></ngx-spinner>
+        <ngx-spinner
+             bdColor="rgba(51,51,51,0.8)"
+             size="medium"
+             color="#fff"
+             loadingText="Loading..."
+             type="ball-scale-multiple">
+        </ngx-spinner> 
+          
